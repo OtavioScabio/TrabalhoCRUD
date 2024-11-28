@@ -18,7 +18,7 @@ public class ProdutoDAO {
         }
     }
 
-    // Create
+    
     public void adicionarProduto(Produto produto) {
         String sql = "INSERT INTO produto (nome, preco, quantidade) VALUES (?, ?, ?)";
         try (Connection conn = DriverManager.getConnection(URL);
@@ -32,7 +32,7 @@ public class ProdutoDAO {
         }
     }
 
-    // Read
+    
     public List<Produto> buscarTodos() {
         List<Produto> produtos = new ArrayList<>();
         String sql = "SELECT * FROM produto";
@@ -53,7 +53,7 @@ public class ProdutoDAO {
         return produtos;
     }
 
-    // Update
+    
     public void atualizarProduto(Produto produto) {
         String sql = "UPDATE produto SET nome = ?, preco = ?, quantidade = ? WHERE id = ?";
         try (Connection conn = DriverManager.getConnection(URL);
@@ -68,7 +68,7 @@ public class ProdutoDAO {
         }
     }
 
-    // Delete
+    
     public void excluirProduto(int id) {
         String sql = "DELETE FROM produto WHERE id = ?";
         try (Connection conn = DriverManager.getConnection(URL);
