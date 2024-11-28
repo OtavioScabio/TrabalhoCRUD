@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainController">
+    <center>
+        <TabPane>
+            <!-- Aba Produtos -->
+            <Tab text="Produtos">
+                <VBox spacing="10" alignment="CENTER">
+                    <TableView fx:id="tabelaProdutos" prefHeight="200">
+                        <columns>
+                            <TableColumn fx:id="colIdProduto" text="ID" />
+                            <TableColumn fx:id="colNomeProduto" text="Nome" />
+                            <TableColumn fx:id="colPrecoProduto" text="Preço" />
+                            <TableColumn fx:id="colQuantidadeProduto" text="Quantidade" />
+                        </columns>
+                    </TableView>
+                    <HBox spacing="10">
+                        <TextField fx:id="txtProdutoNome" promptText="Nome do Produto" />
+                        <TextField fx:id="txtProdutoPreco" promptText="Preço" />
+                        <TextField fx:id="txtProdutoQuantidade" promptText="Quantidade" />
+                    </HBox>
+                    <HBox spacing="10">
+                        <Button text="Adicionar" onAction="#adicionarProduto" />
+                        <Button text="Atualizar" onAction="#atualizarProduto" />
+                        <Button text="Excluir" onAction="#excluirProduto" />
+                    </HBox>
+                </VBox>
+            </Tab>
+
+            <!-- Aba Fornecedores -->
+            <Tab text="Fornecedores">
+                <VBox spacing="10" alignment="CENTER">
+                    <TableView fx:id="tabelaFornecedores" prefHeight="200">
+                        <columns>
+                            <TableColumn fx:id="colIdFornecedor" text="ID" />
+                            <TableColumn fx:id="colNomeFornecedor" text="Nome" />
+                            <TableColumn fx:id="colEmailFornecedor" text="Email" />
+                            <TableColumn fx:id="colTelefoneFornecedor" text="Telefone" />
+                        </columns>
+                    </TableView>
+                    <HBox spacing="10">
+                        <TextField fx:id="txtFornecedorNome" promptText="Nome do Fornecedor" />
+                        <TextField fx:id="txtFornecedorEmail" promptText="Email" />
+                        <TextField fx:id="txtFornecedorTelefone" promptText="Telefone" />
+                    </HBox>
+                    <HBox spacing="10">
+                        <Button text="Adicionar" onAction="#adicionarFornecedor" />
+                        <Button text="Atualizar" onAction="#atualizarFornecedor" />
+                        <Button text="Excluir" onAction="#excluirFornecedor" />
+                    </HBox>
+                </VBox>
+            </Tab>
+        </TabPane>
+    </center>
+</BorderPane>
